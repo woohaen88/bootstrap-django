@@ -1,9 +1,9 @@
 .env
 do_it_django_prj/__pycache__
-blog\migrations/__pycache__
-single_pages/__pycache__
-blog/__pycache__
-blog/migrations
-single_pages/migrations
-single_pages/__pycache__
+blog\migrations/__pycache__/
+single_pages/__pycache__/
+blog/__pycache__/
+blog/migrations/
+single_pages/migrations/
+single_pages/__pycache__/
 do_it_django_prj/__pycache__/settings.cpython-38.pyc
