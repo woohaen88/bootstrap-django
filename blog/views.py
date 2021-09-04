@@ -1,14 +1,17 @@
 from django.shortcuts import render
 from .models import Post
 
+# 여러 포스트를 나열할 때 ListView 활용
+from django.views.generic import ListView
+
 # Create your views here.
-def index(request):
-    posts = Post.objects.all().order_by('-pk')
+class PostList(ListView):
+    model = Post
+    ordering = '-pk'
+    # template_name = 'blog/index.html'
 
-
-    return render(request, 'blog/index.html', context={'posts': posts})
 
 def single_post_page(request, pk):
     post = Post.objects.get(pk=pk)
 
-    return render(request, 'blog/single_post_page.html', context={'post': post,})
+    return render(request, "blog/single_post_page.html", context={"post": post,},)
