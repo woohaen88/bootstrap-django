@@ -7,3 +7,8 @@ def index(request):
 
 
     return render(request, 'blog/index.html', context={'posts': posts})
+
+def single_post_page(request, pk):
+    post = Post.objects.get(pk=pk)
+
+    return render(request, 'blog/single_post_page.html', context={'post': post,})
