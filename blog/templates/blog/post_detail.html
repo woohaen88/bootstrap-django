@@ -77,6 +77,14 @@
 
         <!-- Post Content -->
         <p>{{ post.content }}</p>
+
+        <!-- file upload -->
+        {% if post.file_upload %}
+        <a href="{{ post.file_upload.url }}" class="btn btn-outline-dark" role="button" download>Download</a>       
+        <span>{{ post.get_file_name }} </span>
+        
+        {% endif %}
+
         <hr>
 
         <!-- Comments Form -->
